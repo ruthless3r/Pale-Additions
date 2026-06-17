@@ -28,6 +28,7 @@
 	"mixins": [
 		"pale_additions.mixins.json"
 	],
+	"accessWidener": "pale_additions.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.18.4",
 		"minecraft": "~1.20.1",
