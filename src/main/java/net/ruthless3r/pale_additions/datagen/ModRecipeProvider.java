@@ -22,10 +22,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.GLOWING_RESIN_CLUMP,
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GLOWING_RESIN_CLUMP,
                 RecipeCategory.DECORATIONS, ModBlocks.GLOWING_RESIN_BLOCK);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GLOWING_RESIN_CLUMP)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GLOWING_RESIN_CLUMP)
                 .input(ModItems.RESIN_NUGGET, 3)
                 .input(Items.GLOWSTONE_DUST)
                 .criterion(hasItem(Items.GLOWSTONE_DUST), conditionsFromItem(Items.GLOWSTONE_DUST))

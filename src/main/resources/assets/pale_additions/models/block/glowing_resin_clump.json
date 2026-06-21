@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/resin_clump",
+  "textures": {
+    "face": "pale_additions:block/glowing_resin_clump"
+  }
+}

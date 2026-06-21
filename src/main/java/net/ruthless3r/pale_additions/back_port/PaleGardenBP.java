@@ -10,5 +10,4 @@ import net.minecraft.util.Identifier;
 
 public class PaleGardenBP {
     public static final Block RESIN_CLUMP = Registries.BLOCK.get(new Identifier("palegardenbackport", "resin_clump"));
-    public static final Block PALE_MOSS_BLOCK = Registries.BLOCK.get(new Identifier("palegardenbackport", "pale_moss_block"));
 }
