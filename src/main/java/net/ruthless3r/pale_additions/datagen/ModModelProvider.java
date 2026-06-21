@@ -21,6 +21,5 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RESIN_NUGGET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GLOWING_RESIN_CLUMP, Models.GENERATED);
     }
 }
