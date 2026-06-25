@@ -2,16 +2,14 @@ package net.ruthless3r.pale_additions.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
-import net.ruthless3r.pale_additions.back_port.PaleGardenBP;
-import net.ruthless3r.pale_additions.block.ModBlocks;
-import net.ruthless3r.pale_additions.item.ModItems;
+import net.ruthless3r.pale_additions.init.PaleBackPort;
+import net.ruthless3r.pale_additions.init.ModBlocks;
+import net.ruthless3r.pale_additions.init.ModItems;
 
 import java.util.function.Consumer;
 
@@ -32,14 +30,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.RESIN_NUGGET), conditionsFromItem(ModItems.RESIN_NUGGET))
                 .offerTo(exporter, new Identifier("pale_additions:glowing_resin_clump_from_resin_nuggets_and_glowstone_dust"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, PaleGardenBP.RESIN_CLUMP)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, PaleBackPort.RESIN_CLUMP)
                 .input(ModItems.RESIN_NUGGET, 4)
                 .criterion(hasItem(ModItems.RESIN_NUGGET), conditionsFromItem(ModItems.RESIN_NUGGET))
                 .offerTo(exporter, new Identifier("pale_additions:resin_clump_from_resin_nuggets"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RESIN_NUGGET, 4)
-                .input(PaleGardenBP.RESIN_CLUMP)
-                .criterion(hasItem(PaleGardenBP.RESIN_CLUMP), conditionsFromItem(PaleGardenBP.RESIN_CLUMP))
+                .input(PaleBackPort.RESIN_CLUMP)
+                .criterion(hasItem(PaleBackPort.RESIN_CLUMP), conditionsFromItem(PaleBackPort.RESIN_CLUMP))
                 .offerTo(exporter, new Identifier("pale_additions:resin_nuggets_from_resin_clump"));
     }
 }

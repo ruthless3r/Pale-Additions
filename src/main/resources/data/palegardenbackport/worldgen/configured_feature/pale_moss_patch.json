@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "palegardenbackport:pale_moss_carpet",
+            "Properties": {
+              "bottom": "true",
+              "east": "none",
+              "north": "none",
+              "south": "none",
+              "west": "none"
+            }
+          },
+          "weight": 25
+        },
+        {
+          "data": {
+            "Name": "pale_additions:pale_grass"
+          },
+          "weight": 50
+        },
+        {
+          "data": {
+            "Name": "pale_additions:pale_tall_grass",
+            "Properties": {
+              "half": "lower"
+            }
+          },
+          "weight": 10
+        },
+        {
+          "data": {
+            "Name": "pale_additions:pale_bush"
+          },
+          "weight": 20
+        },
+        {
+          "data": {
+            "Name": "pale_additions:pale_azalea"
+          },
+          "weight": 5
+        }
+      ]
+    }
+  }
+}

@@ -1,7 +1,15 @@
 {
   "block.pale_additions.glowing_resin_clump": "Glowing Resin Clump",
   "block.pale_additions.glowing_resin_block": "Block of Glowing Resin",
+  "block.pale_additions.pale_grass": "Pale Grass",
+  "block.pale_additions.pale_bush": "Pale Bush",
+  "block.pale_additions.pale_tall_grass": "Pale Tall Grass",
+  "block.pale_additions.pale_azalea": "Pale Azalea",
+  "block.pale_additions.potted_pale_azalea": "Potted Pale Azalea",
+
   "item.pale_additions.resin_nugget": "Resin Nugget",
+  "item.pale_additions.pale_apple": "Pale Apple",
+  "item.pale_additions.resin_glazed_pale_apple": "Resin Glazed Pale Apple",
 
   "itemgroup.pale_additions": "Pale Additions"
 }
