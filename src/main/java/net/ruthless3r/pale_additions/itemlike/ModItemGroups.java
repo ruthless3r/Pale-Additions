@@ -1,4 +1,4 @@
-package net.ruthless3r.pale_additions.init;
+package net.ruthless3r.pale_additions.itemlike;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -28,6 +28,8 @@ public class ModItemGroups {
                         entries.add(ModItems.RESIN_NUGGET);
                         entries.add(ModItems.PALE_APPLE);
                         entries.add(ModItems.RESIN_GLAZED_PALE_APPLE);
+                        entries.add(ModItems.PALE_COW_SPAWN_EGG);
+                        entries.add(ModBlocks.PALE_AZALEA_LEAVES);
 
                     }).build());
 

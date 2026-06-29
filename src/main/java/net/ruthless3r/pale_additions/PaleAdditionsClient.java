@@ -2,9 +2,14 @@ package net.ruthless3r.pale_additions;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.block.Block;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
-import net.ruthless3r.pale_additions.init.ModBlocks;
+import net.ruthless3r.pale_additions.entity.ModEntities;
+import net.ruthless3r.pale_additions.entity.client.ModModelLayers;
+import net.ruthless3r.pale_additions.entity.client.PaleCowEntityRenderer;
+import net.ruthless3r.pale_additions.entity.client.PaleCowModel;
+import net.ruthless3r.pale_additions.itemlike.ModBlocks;
 
 public class PaleAdditionsClient  implements ClientModInitializer {
     @Override
@@ -21,5 +26,8 @@ public class PaleAdditionsClient  implements ClientModInitializer {
                 ModBlocks.PALE_TALL_GRASS,
                 ModBlocks.PALE_AZALEA,
                 ModBlocks.POTTED_PALE_AZALEA);
+
+        EntityRendererRegistry.register(ModEntities.PALE_COW, PaleCowEntityRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.PALE_COW, PaleCowModel::getTexturedModelData);
     }
 }

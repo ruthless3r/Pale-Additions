@@ -4,11 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.*;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
-import net.ruthless3r.pale_additions.PaleAdditions;
-import net.ruthless3r.pale_additions.init.ModBlocks;
-import net.ruthless3r.pale_additions.init.ModItems;
+import net.ruthless3r.pale_additions.itemlike.ModBlocks;
+import net.ruthless3r.pale_additions.itemlike.ModItems;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -25,6 +27,7 @@ public class ModModelProvider extends FabricModelProvider {
 //        blockStateModelGenerator.registerAzalea(ModBlocks.PALE_AZALEA);
         registerAzaleaPlant(blockStateModelGenerator, ModBlocks.PALE_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(ModBlocks.POTTED_PALE_AZALEA);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PALE_AZALEA_LEAVES);
     }
 
     @Override
@@ -41,6 +44,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, identifier));
     }
 
-    //TODO: Make a custom datagen for potted azalea
-    // I'm not sure of this, but I think the template from registerPottedAzaleaBush also suffers from the same issue as the other.
+//    public final void registerSpawnEgg(Item item, ItemModelGenerator itemModelGenerator) {
+//        Model model = new Model(Optional.of(new Identifier("minecraft", "item/template_spawn_egg")), Optional.empty());
+//        Identifier identifier = model.upload(ModelIds.getItemModelId(item), new TextureMap(), itemModelGenerator.writer);
+//        Map<TextureKey, Identifier> textures = Map.of();
+//        itemModelGenerator.write
+//    }
+
 }

@@ -7,9 +7,9 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
-import net.ruthless3r.pale_additions.init.PaleBackPort;
-import net.ruthless3r.pale_additions.init.ModBlocks;
-import net.ruthless3r.pale_additions.init.ModItems;
+import net.ruthless3r.pale_additions.itemlike.PaleBackPort;
+import net.ruthless3r.pale_additions.itemlike.ModBlocks;
+import net.ruthless3r.pale_additions.itemlike.ModItems;
 
 import java.util.function.Consumer;
 

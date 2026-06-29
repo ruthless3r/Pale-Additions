@@ -3,7 +3,7 @@
 	"package": "net.ruthless3r.pale_additions.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"CowEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

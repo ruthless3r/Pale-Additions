@@ -2,11 +2,16 @@ package net.ruthless3r.pale_additions;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 import net.ruthless3r.pale_additions.datagen.ModBlockTagProvider;
 import net.ruthless3r.pale_additions.datagen.ModItemTagProvider;
 import net.ruthless3r.pale_additions.datagen.ModLootTableProvider;
 import net.ruthless3r.pale_additions.datagen.ModModelProvider;
 import net.ruthless3r.pale_additions.datagen.ModRecipeProvider;
+import net.ruthless3r.pale_additions.datagen.ModWorldgenProvider;
+import net.ruthless3r.pale_additions.world.ModWorldConfiguredFeatures;
+import net.ruthless3r.pale_additions.world.ModWorldPlacedFeatures;
 
 public class PaleAdditionsDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -18,5 +23,13 @@ public class PaleAdditionsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModWorldgenProvider::new);
+
+	}
+
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModWorldConfiguredFeatures::boostrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModWorldPlacedFeatures::boostrap);
 	}
 }

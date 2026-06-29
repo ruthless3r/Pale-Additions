@@ -1,11 +1,9 @@
-package net.ruthless3r.pale_additions.init;
+package net.ruthless3r.pale_additions.itemlike;
 
 import com.dannbrown.palegardenbackport.common.content.blocks.ResinClumpBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.GrassBlock;
-import net.minecraft.block.TallPlantBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -13,7 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlag;
 import net.minecraft.util.Identifier;
 import net.ruthless3r.pale_additions.PaleAdditions;
-import net.ruthless3r.pale_additions.components.PaleAzaleaBlock;
+import net.ruthless3r.pale_additions.itemlike.custom.PaleAzaleaBlock;
 
 
 public class ModBlocks {
@@ -36,6 +34,8 @@ public class ModBlocks {
 
     public static final Block PALE_AZALEA = registerBlock("pale_azalea", new PaleAzaleaBlock(FabricBlockSettings.copyOf(Blocks.AZALEA)));
     public static final Block POTTED_PALE_AZALEA = registerBlock("potted_pale_azalea", Blocks.createFlowerPotBlock(PALE_AZALEA, new FeatureFlag[0]));
+
+    public static final Block PALE_AZALEA_LEAVES = registerBlock("pale_azalea_leaves", new LeavesBlock(FabricBlockSettings.copyOf(PaleBackPort.PALE_OAK_LEAVES)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

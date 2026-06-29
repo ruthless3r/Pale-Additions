@@ -6,10 +6,14 @@
   "block.pale_additions.pale_tall_grass": "Pale Tall Grass",
   "block.pale_additions.pale_azalea": "Pale Azalea",
   "block.pale_additions.potted_pale_azalea": "Potted Pale Azalea",
+  "block.pale_additions.pale_azalea_leaves": "Pale Azalea Leaves",
 
   "item.pale_additions.resin_nugget": "Resin Nugget",
   "item.pale_additions.pale_apple": "Pale Apple",
   "item.pale_additions.resin_glazed_pale_apple": "Resin Glazed Pale Apple",
+  "item.pale_additions.pale_cow_spawn_egg": "Pale Cow Spawn Egg",
+
+  "entity.pale_additions.pale_cow": "Pale Cow",
 
   "itemgroup.pale_additions": "Pale Additions"
 }
